@@ -26,15 +26,24 @@ body {
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
-
-.Header__logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
-.Header__logo {
+.header__logo {
   height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .heading-primary {
@@ -42,7 +51,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -55,7 +63,6 @@ body {
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -67,18 +74,6 @@ body {
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-}
-
-.Header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 
 @-webkit-keyframes MoveInleft {
@@ -295,4 +290,4 @@ body {
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-}/*# sourceMappingURL=lol.css.map */
+}
