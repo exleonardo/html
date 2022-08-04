@@ -1,9 +1,11 @@
+// ------- Блок переменных---------
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
-$color-blak: #000;
+$color-black: #000;
+//--------------------------------
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +34,7 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+
   &__logo-box {
     position: absolute;
     top: 4rem;
@@ -76,7 +79,9 @@ body {
     animation-timing-function: ease-out;
   }
 }
+// -----------------animation-------------------------------
 
+//------------------moving left------------------------------
 @keyframes MoveInleft {
   0% {
     opacity: 0;
@@ -102,6 +107,9 @@ body {
     -o-transform: translateX(0);
   }
 }
+//----------------------moving right END---------------------
+
+//----------------------moving right-------------------------
 @keyframes MoveInRight {
   0% {
     opacity: 0;
@@ -127,73 +135,9 @@ body {
     -o-transform: translateX(0);
   }
 }
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  position: relative;
-  transition: all 0.2s;
-  font-size: 1.6 rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  -ms-border-radius: 10rem;
-  -o-border-radius: 10rem;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-}
+//------------------moving right END----------------------------
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba($color-blak, 0.2);
-  -webkit-transform: translateY(-3px);
-  -moz-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  -o-transform: translateY(-3px);
-}
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba($color-blak, 0.2);
-  -webkit-transform: translateY(-1px);
-  -moz-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  -o-transform: translateY(-1px);
-}
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  -ms-border-radius: 10rem;
-  -o-border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-.btn--white::after {
-  background-color: $color-white;
-}
-.btn--white::after {
-  transform: scalex(1.5) scale(1.6);
-  -webkit-transform: scalex(1.5) scale(1.6);
-  -moz-transform: scalex(1.5) scale(1.6);
-  -ms-transform: scalex(1.5) scale(1.6);
-  -o-transform: scalex(1.5) scale(1.6);
-  opacity: 0;
-}
+// -----------------animated bottom-----------------------------
 @keyframes MoveInBottom {
   0% {
     opacity: 0;
@@ -208,10 +152,80 @@ body {
     -o-transform: translateX(0);
   }
 }
-.btn--animated {
-  animation-name: MoveInBottom;
-  animation-duration: 0.4s;
-  animation-delay: 0.65s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: backwards;
+// --------------------animation END----------------------------
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: all 0.2s;
+    font-size: 1.6 rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    &::after {
+      transform: scalex(1.5) scale(1.6);
+      -webkit-transform: scalex(1.5) scale(1.6);
+      -moz-transform: scalex(1.5) scale(1.6);
+      -ms-transform: scalex(1.5) scale(1.6);
+      -o-transform: scalex(1.5) scale(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+  }
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation-name: MoveInBottom;
+    animation-duration: 0.4s;
+    animation-delay: 0.65s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
 }
