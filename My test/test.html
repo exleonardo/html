@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-size: 16px;
+      }
+      .box {
+        position: relative;
+        perspective: 100em;
+        text-align: center;
+      }
+      .box:hover .box__front {
+        transform: rotateY(-180deg);
+      }
+      .box:hover .box__back {
+        transform: rotateY(0);
+      }
+      .box__card {
+        position: absolute;
+        top: 20vw;
+        left: 40vw;
+        backface-visibility: hidden;
+        transition: all 1s ease;
+      }
+      .box__front {
+        width: 10rem;
+        height: 10rem;
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+      }
+      .box__back {
+        width: 10rem;
+        height: 10rem;
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box__card box__front">front</div>
+      <div class="box__card box__back">back</div>
+    </div>
+  </body>
+</html>
