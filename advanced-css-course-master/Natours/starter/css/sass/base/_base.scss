@@ -8,6 +8,19 @@
 html {
   //default 1rem
   font-size: 62.5%;
+
+  @include respond(Phone) {
+    font-size: 50%;
+  }
+  @include respond(Tab-port) {
+    font-size: 60%;
+  }
+  @include respond(Tab-land) {
+    font-size: 70%;
+  }
+  @include respond(Big-desktop) {
+    font-size: 80%;
+  }
 }
 body {
   box-sizing: border-box;
