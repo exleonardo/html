@@ -31,5 +31,10 @@
       height: 2rem;
       width: 2rem;
     }
+    p {
+    }
+  }
+  &__btn {
+    grid-column: 1/-1;
   }
 }
